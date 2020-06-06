@@ -1,6 +1,10 @@
 import pycrunchbase, time, csv, simplejson as json, os, numpy as np,requests, json, re, urllib2, csv, os
+
+# Add academic API code here
 cb = pycrunchbase.CrunchBase('')
-#make a list of founder hyperlinks
+
+#make a list of founder hyperlinks from a csv file.  
+#This file comes from the Crunchbase Daily CSV Export "People" spreadsheet.
 founders = []
 f = open('founders.csv', 'rU')
 csv_f = csv.reader(f, dialect=csv.excel_tab)
@@ -25,6 +29,7 @@ for i in range(2500):
 		jobs[founders[i]]=[]
 		start[founders[i]]=[]
 		end[founders[i]]=[]
+		#founders have multiple jobs and r is different for each person
 		for j in range(r):
 			try:
 				jobs[founders[i]].append(pers.jobs[j])
