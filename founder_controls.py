@@ -1,5 +1,5 @@
 import pycrunchbase, time, csv, simplejson as json, os, numpy as np,requests, json, re, urllib2, csv, os
-cb = pycrunchbase.CrunchBase('e68a904dc9992cdf6ce51a63be6625fa')
+cb = pycrunchbase.CrunchBase('')
 #make a list of founder hyperlinks
 founders = []
 f = open('founders.csv', 'rU')
